@@ -29,6 +29,10 @@ public class Map {
     Terrain C = new Terrain(15, "Cover", c, 1, 1);
     Terrain B = new Terrain(35, "Base", s, 1, 1);
     Terrain E = new Terrain(35, "EnemyBase", e, 1, 1);
+    Terrain getSquare(int x, int y, Terrain[][] curMap) {
+        return curMap[x][curMap.length - y];
+    }
+    
     /** Terrain of first map, prologue 1. */
     Terrain[][] p1 = {{G, G, G, G, G, G, G, G, G, G}, 
                      {G, G, G, G, G, G, G, G, G, G}, 
@@ -39,5 +43,10 @@ public class Map {
                      {G, G, G, G, G, G, G, G, G, G},
                      {G, G, G, G, G, G, G, G, G, G}, 
                      {G, G, G, G, G, G, G, G, G, G}, 
-                     {G, G, G, G, G, G, G, G, G, G}}
+                     {G, G, G, G, G, G, G, G, G, G}};
+    
+    /** Returns map that user uses. */
+    String getMap(Terrain[][] curMap) {
+        return "";
+    }
 }
